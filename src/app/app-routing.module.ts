@@ -15,7 +15,7 @@ const routes: Routes = [];
     { path: 'index', component: IndexComponent },
     { path:'privacystatements', component: PrivacyStatementsComponent },
     { path:'forum', component: ForumComponent },
-    { path:'replies/:id', component: RepliesComponent },
+    { path:'comments/:id', component: RepliesComponent },
   ])],
   exports: [RouterModule]
 })

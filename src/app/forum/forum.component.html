@@ -111,7 +111,7 @@
                 <input name="post_id" id="post_id" type="text" class="form-control" formControlName="post_id"
                   [value] ="post.id" hidden>
                 <button type="submit" class="primary-btn" (click)="addComment(newComment.value)">Submit</button>
-                <a href="">View All Comments</a>
+                <a [routerLink]="['/comments', post.id]">View All Comments</a>
               </form>
         </div>
       </div>

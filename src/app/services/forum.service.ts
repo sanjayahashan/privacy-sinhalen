@@ -28,6 +28,10 @@ getPosts(){
   return this.firestore.collection('post').snapshotChanges();
 }
 
+getSinglepost(id: string) {
+  return this.firestore.doc('replies' + id);
+}
+
 createComment(value) {
   return new Promise<any>((resolve, reject) =>{
       this.firestore
