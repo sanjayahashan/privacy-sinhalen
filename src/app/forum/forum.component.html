@@ -10,10 +10,10 @@
         <a class="nav-link" href="#">මුල් පිටුව</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">රහස්‍යතා ප්‍රතිපත්ති</a>
+        <a class="nav-link" href="privacystatements">රහස්‍යතා ප්‍රතිපත්ති</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">නව ප්‍රතිපත්ති එකතු කිරීම</a>
+        <a class="nav-link" href="requests">නව ප්‍රතිපත්ති එකතු කිරීම</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">අප අමතන්න</a>
@@ -24,9 +24,9 @@
 <section class="home-about-area section-gap" id="addPost">
   <div class="row row justify-content-center align-items-center">
     <div class="col-md-8 pb-30 header-text text-center">
-      <h1 class="mb-10">Add New Post</h1>
+      <h1 class="mb-10">ෆෝර්ම පෝස්ටුවක් පලකරන්න</h1>
       <p>
-        Clear your doubts with help from your fellows
+        අන් අයගේ අදහස් විමසන්න
       </p>
     </div>
   </div>
@@ -70,9 +70,9 @@
 <section class="home-about-area section-gap" id="statements">
   <div class="row row justify-content-center align-items-center">
     <div class="col-md-8 pb-30 header-text text-center">
-      <h1 class="mb-10">Forum Posts</h1>
+      <h1 class="mb-10">ෆෝරම් පෝස්ටුව</h1>
       <p>
-        Latest form posts
+        නවතම ෆෝරම් පෝස්ටු
       </p>
     </div>
   </div>
@@ -84,7 +84,7 @@
             <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                  <h2>{{ post.post}}</h2>
+                  <h2>{{ post.post }}</h2>
                 </mat-panel-title>
                 <mat-panel-description>
                 </mat-panel-description>
@@ -110,8 +110,8 @@
                 <input name="date_a" id="date_a" type="text" class="form-control" formControlName="date_a" value="" hidden>
                 <input name="post_id" id="post_id" type="text" class="form-control" formControlName="post_id"
                   [value] ="post.id" hidden>
-                <button type="submit" class="primary-btn" (click)="addComment(newComment.value)">Submit</button>
-                <a [routerLink]="['/comments', post.id]">View All Comments</a>
+                <button type="submit" class="primary-btn" (click)="addComment(newComment.value)">පලකරන්න</button>
+                <a [routerLink]="['/comments', post.id]">සියලු අදහස්</a>
               </form>
         </div>
       </div>

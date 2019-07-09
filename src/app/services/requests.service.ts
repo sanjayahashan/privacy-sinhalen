@@ -11,32 +11,21 @@ import * as firebase from 'firebase';
 @Injectable({
   providedIn: 'root'
 })
-export class ForumService {
+export class RequestsService {
 
   constructor(private firestore: AngularFirestore) { }
 
   createPosts(value) {
     return new Promise<any>((resolve, reject) =>{
         this.firestore
-            .collection("post")
+            .collection("requests")
             .add(value)
             .then(res => {}, err => reject(err));
     });
 }
 
-getPosts(){
-  return this.firestore.collection('post').snapshotChanges();
-}
-getComments(){
-  return this.firestore.collection('replies').snapshotChanges();
+getRequests(){
+  return this.firestore.collection('requests').snapshotChanges();
 }
 
-createComment(value) {
-  return new Promise<any>((resolve, reject) =>{
-      this.firestore
-          .collection("replies")
-          .add(value)
-          .then(res => {}, err => reject(err));
-  });
-}
 }

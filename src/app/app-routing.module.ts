@@ -5,6 +5,9 @@ import { HomeComponent } from './home/home.component';
 import { PrivacyStatementsComponent } from './privacy-statements/privacy-statements.component';
 import { ForumComponent } from './forum/forum.component';
 import { RepliesComponent } from './forum/replies/replies.component';
+import { RequestComponent } from './request/request.component';
+import { ViewComponent } from './request/view/view.component';
+import { YouTubeComponent } from './you-tube/you-tube.component';
 
 
 const routes: Routes = [];
@@ -16,6 +19,9 @@ const routes: Routes = [];
     { path:'privacystatements', component: PrivacyStatementsComponent },
     { path:'forum', component: ForumComponent },
     { path:'comments/:id', component: RepliesComponent },
+    { path:'requests', component:RequestComponent },
+    { path: 'requests/view', component:ViewComponent },
+    { path:'index2', component:YouTubeComponent }
   ])],
   exports: [RouterModule]
 })

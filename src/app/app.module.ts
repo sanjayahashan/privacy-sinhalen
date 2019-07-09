@@ -16,6 +16,9 @@ import { ForumComponent } from './forum/forum.component';
 import { RepliesComponent } from './forum/replies/replies.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RequestComponent } from './request/request.component';
+import { ViewComponent } from './request/view/view.component';
+import { YouTubeComponent } from './you-tube/you-tube.component';
 var config = {
   apiKey: "AIzaSyCEPw5mgf8FSQqfKhQxq1jgcpgIU3h60xI",
   authDomain: "privacy-sinhalen.firebaseapp.com",
@@ -33,7 +36,10 @@ var config = {
     HomeComponent,
     PrivacyStatementsComponent,
     ForumComponent,
-    RepliesComponent
+    RepliesComponent,
+    RequestComponent,
+    ViewComponent,
+    YouTubeComponent
   ],
   imports: [
     BrowserModule,
