@@ -8,11 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-<<<<<<< HEAD
     "postinstall": "ng build --aot --prod"
-=======
-    "postinstall": "ng build --aot -prod"
->>>>>>> 1a486d4b697c6a44006f370da7fbbdc98c180d09
   },
   "private": true,
   "dependencies": {
@@ -29,12 +25,9 @@
     "@angular/router": "~8.1.0",
     "@ng-bootstrap/ng-bootstrap": "^5.0.0-rc.1",
     "core-js": "^2.5.4",
-<<<<<<< HEAD
     "express": "^4.17.1",
     "path": "^0.12.7",
-=======
     "firebase": "^6.2.4",
->>>>>>> 1a486d4b697c6a44006f370da7fbbdc98c180d09
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1",
@@ -61,12 +54,7 @@
     "typescript": "~3.4.5"
   },
   "engines": {
-<<<<<<< HEAD
     "node": "~10.15.3",
     "npm": "~6.4.1"
-=======
-    "node": "10.15.3",
-    "npm": "6.9.0"
->>>>>>> 1a486d4b697c6a44006f370da7fbbdc98c180d09
   }
 }
