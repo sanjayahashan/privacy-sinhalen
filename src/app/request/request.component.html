@@ -39,16 +39,16 @@
     <div class="row justify-content-center align-items-center">
       <div class="card col-12">
         <div class="card-header">
-          <h3>Make a request</h3>
+          <h3>ඔබගේ ඉල්ලුම් අප වෙත යොමු කරන්න</h3>
         </div>
         <div class="car-body justify-content-center align-items-center">
           <form [formGroup]="newRequest">
             <div class="row">
               <div class="col-md-6 pr-1">
                 <div class="form-group">
-                  <label>Request</label>
+                  <label>ඉල්ලුම් කරන්න (Request)</label>
                   <input name="request" id="request" type="text" class="form-control" formControlName="request"
-                    placeholder="Request" required>
+                    placeholder="ශීර්ෂය(Title)" required>
                 </div>
               </div>
               <div class="col-md-6 pr-1">
@@ -59,8 +59,7 @@
                 </div>
               </div>
             </div>
-            <input name="user_id" id="user_id" type="text" class="form-control" formControlName="user_id""
-              hidden>
+           
             <button type="submit" class="primary-btn" (click)="addRequest(newRequest.value)">පලකරන්න</button>
           </form>
         </div>
