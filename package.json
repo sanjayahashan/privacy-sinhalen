@@ -8,7 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+<<<<<<< HEAD
     "postinstall": "ng build --aot --prod"
+=======
+    "postinstall": "ng build --aot -prod"
+>>>>>>> 1a486d4b697c6a44006f370da7fbbdc98c180d09
   },
   "private": true,
   "dependencies": {
@@ -17,6 +21,7 @@
     "@angular/common": "~8.1.0",
     "@angular/compiler": "~8.1.0",
     "@angular/core": "~8.1.0",
+    "@angular/fire": "^5.2.1",
     "@angular/forms": "~8.1.0",
     "@angular/material": "^8.0.2",
     "@angular/platform-browser": "~8.1.0",
@@ -24,16 +29,20 @@
     "@angular/router": "~8.1.0",
     "@ng-bootstrap/ng-bootstrap": "^5.0.0-rc.1",
     "core-js": "^2.5.4",
+<<<<<<< HEAD
     "express": "^4.17.1",
     "path": "^0.12.7",
+=======
+    "firebase": "^6.2.4",
+>>>>>>> 1a486d4b697c6a44006f370da7fbbdc98c180d09
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "@angular/cli": "~8.1.0",
+    "@angular/compiler-cli": "~8.1.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.801.0",
-    "@angular/cli": "~8.1.0",
-    "@angular/compiler-cli": "~8.1.0",
     "@angular/language-service": "~8.1.0",
     "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
@@ -52,7 +61,12 @@
     "typescript": "~3.4.5"
   },
   "engines": {
+<<<<<<< HEAD
     "node": "~10.15.3",
     "npm": "~6.4.1"
+=======
+    "node": "10.15.3",
+    "npm": "6.9.0"
+>>>>>>> 1a486d4b697c6a44006f370da7fbbdc98c180d09
   }
 }

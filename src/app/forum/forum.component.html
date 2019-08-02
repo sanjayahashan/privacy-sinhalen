@@ -1,0 +1,120 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: rgb(8, 8, 8) !important">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">මුල් පිටුව</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="privacystatements">රහස්‍යතා ප්‍රතිපත්ති</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="requests">නව ප්‍රතිපත්ති එකතු කිරීම</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">අප අමතන්න</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<section class="home-about-area section-gap" id="addPost">
+  <div class="row row justify-content-center align-items-center">
+    <div class="col-md-8 pb-30 header-text text-center">
+      <h1 class="mb-10">ෆෝර්ම පෝස්ටුවක් පලකරන්න</h1>
+      <p>
+        අන් අයගේ අදහස් විමසන්න
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="card col-12">
+        <div class="card-header">
+          <h3>Add New Post</h3>
+        </div>
+        <div class="car-body justify-content-center align-items-center">
+          <form [formGroup]="newPost">
+            <div class="row">
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>Title</label>
+                  <input name="post" id="post" type="text" class="form-control" formControlName="post"
+                    placeholder="Title" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>Description</label>
+                  <textarea name="Description" id="" cols="30" rows="5" placeholder="Description" class="form-control"
+                    formControlName="description"></textarea>
+                </div>
+              </div>
+            </div>
+            <input name="user_id" id="user_id" type="text" class="form-control" formControlName="user" value="test"
+              hidden>
+            <input name="date" id="date" type="text" class="form-control" formControlName="date_added" value="" hidden>
+            <button type="submit" class="primary-btn" (click)="addPost(newPost.value)">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-about-area section-gap" id="statements">
+  <div class="row row justify-content-center align-items-center">
+    <div class="col-md-8 pb-30 header-text text-center">
+      <h1 class="mb-10">ෆෝරම් පෝස්ටුව</h1>
+      <p>
+        නවතම ෆෝරම් පෝස්ටු
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row row justify-content-center align-items-center" *ngFor="let post of list">
+      <div class="card col-12">
+        <div class="car-body">
+          <mat-accordion col-12>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <h2>{{ post.post }}</h2>
+                </mat-panel-title>
+                <mat-panel-description>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>
+                {{ post.description }}
+              </p>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+        <div class="card-footer">
+            <form [formGroup]="newComment">
+                <div class="row">
+                  <div class="col-md-8 pb-1">
+                    <div class="form-group">
+                      <input name="reply" id="reply" type="text" class="form-control" formControlName="reply"
+                        placeholder="Comment" required>
+                    </div>
+                  </div>
+                </div>
+                <input name="user" id="user" type="text" class="form-control" formControlName="user_id" value="test"
+                  hidden>
+                <input name="date_a" id="date_a" type="text" class="form-control" formControlName="date_a" value="" hidden>
+                <input name="post_id" id="post_id" type="text" class="form-control" formControlName="post_id"
+                  [value] ="post.id" hidden>
+                <button type="submit" class="primary-btn" (click)="addComment(newComment.value)">පලකරන්න</button>
+                <a [routerLink]="['/comments', post.id]">සියලු අදහස්</a>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
