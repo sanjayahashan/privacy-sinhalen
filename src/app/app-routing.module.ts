@@ -8,6 +8,7 @@ import { RepliesComponent } from './forum/replies/replies.component';
 import { RequestComponent } from './request/request.component';
 import { ViewComponent } from './request/view/view.component';
 import { YouTubeComponent } from './you-tube/you-tube.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [];
@@ -21,7 +22,8 @@ const routes: Routes = [];
     { path:'comments/:id', component: RepliesComponent },
     { path:'requests', component:RequestComponent },
     { path: 'requests/view', component:ViewComponent },
-    { path:'index2', component:YouTubeComponent }
+    { path:'index2', component:YouTubeComponent },
+    {path:'contact', component:ContactComponent}
   ])],
   exports: [RouterModule]
 })

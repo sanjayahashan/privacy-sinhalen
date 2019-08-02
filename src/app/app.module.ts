@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RequestComponent } from './request/request.component';
 import { ViewComponent } from './request/view/view.component';
 import { YouTubeComponent } from './you-tube/you-tube.component';
+import { ContactComponent } from './contact/contact.component';
 var config = {
   apiKey: "AIzaSyCEPw5mgf8FSQqfKhQxq1jgcpgIU3h60xI",
   authDomain: "privacy-sinhalen.firebaseapp.com",
@@ -39,7 +40,8 @@ var config = {
     RepliesComponent,
     RequestComponent,
     ViewComponent,
-    YouTubeComponent
+    YouTubeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
